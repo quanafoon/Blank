@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <meta charset= "utf-8">
+
+    <div id="app">
+        <h1>Counter: {{ count }}</h1>
+        <button @click="increaseCount">Increase</button>
+        <button @click="MultiplyBy2">Multiply By 2</button>
+        <button @click="MultiplyBy3">Multiply By 3</button>
+
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script>
+      // Vue instance
+      new Vue({
+        el: '#app',
+        data: {
+          count: 0
+        },
+        methods: {
+          increaseCount() {
+            this.count++;
+          },
+          MultiplyBy2() {
+            this.count = this.count * 2;
+          },
+          MultiplyBy3() {
+            this.count = this.count * 3;
+          }
+        }
+      });
+      </script>
+</html>
